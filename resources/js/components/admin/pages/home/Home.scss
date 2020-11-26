@@ -1,0 +1,44 @@
+.main-sidebar {
+  .sidebar {
+    .mt-2 {
+      .nav-pills {
+        .nav-item {
+          .nav-link {
+            i {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1196px) {
+  .info-box {
+    .info-box-content {
+      .info-box-text {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .info-box {
+    .info-box-content {
+      .info-box-text {
+        display: inline;
+      }
+    }
+  }
+}
+
+body {
+  min-width: 330px !important;
+
+  .content-wrapper {
+    min-height: 100vh;
+  }
+}
+

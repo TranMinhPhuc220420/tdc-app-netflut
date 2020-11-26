@@ -1,0 +1,36 @@
+.nav-item {
+
+  &#dropdownNotification {
+
+    #dropdownNotification-btn {
+      height: 100%;
+      width: 100%;
+
+      i {
+        font-size: 1.6rem;
+      }
+    }
+
+    .dropdown-menu {
+      width: 250px;
+    }
+
+    .badge-warning.navbar-badge {
+      top: 0;
+      right: 5px;
+      position: absolute;
+    }
+  }
+
+  &#dropdownMenuActionsAdmin {
+    #dropdownMenuActionsAdmin-body {
+      .avatar-admin {
+        width: 30px;
+      }
+    }
+
+    .dropdown-menu {
+      width: 200px;
+    }
+  }
+}

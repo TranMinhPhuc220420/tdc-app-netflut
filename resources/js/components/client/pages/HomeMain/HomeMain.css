@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Ubuntu:ital,wght@1,500&display=swap");
+.navbar {
+  transition: 0.5s all;
+}
+.navbar .nav-right {
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-right .nav-right-item {
+  margin: 0 10px;
+}
+.navbar .nav-right .nav-right-item .btn {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.navbar .nav-right .nav-right-item.dropdown-user .dropdown .avatar-user {
+  width: 40px;
+}
+.navbar .nav-right .nav-right-item.dropdown-user .dropdown .dropdown-menu {
+  right: 0;
+  left: unset;
+}
+.navbar .nav-right .nav-right-item.form-search {
+  transition: 0.5s all;
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-right .nav-right-item.form-search .btn:focus,
+.navbar .nav-right .nav-right-item.form-search .form-control:focus {
+  box-shadow: none;
+  transition: 0.5s all;
+}
+.navbar .nav-right .nav-right-item.form-search input[name=key_search] {
+  transition: 0.5s all;
+  color: #fff;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  height: 95%;
+  background-color: #021331;
+  border: none;
+}
+.navbar .nav-right .nav-right-item.form-search.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #007bff40;
+}
+.navbar .nav-right .nav-right-item.form-search.show {
+  background-color: #021331;
+}
+.navbar .nav-right .nav-right-item.form-search.show input[name=key_search] {
+  width: 100%;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown a.dropdown-toggle {
+  position: relative;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown a.dropdown-toggle .count-notification {
+  position: absolute;
+  background-color: #d9231a;
+  height: 20px;
+  width: 20px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  right: 0px;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown a.dropdown-toggle::after {
+  display: none;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown .dropdown-menu {
+  background-color: #ffffff6b;
+  right: 0;
+  width: 400px;
+  max-height: 60vh;
+  left: unset;
+  overflow-y: scroll;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown .dropdown-menu .list-unstyled .media {
+  padding: 10px 10px 0 10px;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown .dropdown-menu .list-unstyled .media .mr-3 {
+  width: 100px;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown .dropdown-menu .list-unstyled .media .media-body p {
+  font-size: 0.8rem;
+}
+.navbar .nav-right .nav-right-item.group-notification .dropdown .dropdown-menu .list-unstyled .media:hover {
+  background-color: #ddd;
+}
+
+.navbar.fix-scroll,
+.navbar.fix-scroll-btn {
+  background: #000000;
+}
+
+.logo .icon {
+  font-family: "Fredoka One", cursive;
+  font-size: 2.4rem;
+  color: #021331;
+}
+.logo .text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  color: #d9231a;
+}
+
+#baner.action-video .group-action img {
+  opacity: 0;
+}
+#baner.action-video .group-infor {
+  top: 55%;
+}
+#baner.action-video .group-infor .infor-name-trailer {
+  font-size: 2.5rem;
+}
+#baner.action-video .group-infor .infor-description {
+  transform: scale(0);
+  height: 0;
+}
+
+#baner {
+  position: relative;
+  transition: 0.5s all;
+  height: 110vh;
+}
+#baner .group-action {
+  transition: 0.5s all;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#baner .group-action video,
+#baner .group-action img {
+  transition: 0.5s all;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+#baner .group-infor {
+  transition: 0.5s all;
+  position: absolute;
+  top: 30%;
+  padding-left: 5rem;
+  width: 40%;
+}
+#baner .group-infor .infor-name-trailer {
+  transition: 0.5s all;
+  color: #fff;
+  font-size: 3rem;
+}
+#baner .group-infor .infor-description {
+  transition: 0.5s all;
+  color: #fff;
+  height: 100%;
+  opacity: 0.7;
+}
+
+#baner::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 120px;
+  background-image: linear-gradient(to bottom, #14141400 0%, #141414 100%);
+}
+
+#content {
+  margin-top: -20vh;
+  background-color: #141414;
+}
+#content .video-control video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#content .video-control .controls {
+  transition: 0.25s all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#content .video-control .controls .play-video {
+  position: relative;
+  cursor: pointer;
+  color: #ddd;
+  font-size: 5rem;
+  height: 90%;
+  display: flex;
+  z-index: 88;
+  justify-content: center;
+  align-items: center;
+}
+#content .video-control .controls .play-video i {
+  z-index: 2;
+}
+#content .video-control .controls .play-video i.fa-play-circle {
+  display: inline;
+}
+#content .video-control .controls .play-video i.fa-pause-circle {
+  display: none;
+}
+#content .video-control .controls .play-video span.circle {
+  z-index: 1;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #d9231a;
+  border-radius: 50%;
+  transition: 0.5s all;
+  transform: scale(0);
+  animation-name: circle-control;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+#content .video-control .controls .play-video span.circle:nth-child(3) {
+  animation-delay: 0.25s;
+}
+#content .video-control .controls .play-video span.circle:nth-child(4) {
+  animation-delay: 0.5s;
+}
+#content .video-control .controls .play-video span.circle:nth-child(5) {
+  animation-delay: 0.75s;
+}
+#content .video-control:hover .controls {
+  background-color: #141414c5;
+}
+#content .video-control:hover .controls .play-video {
+  color: #fff;
+}
+#content .video-control.action-video .controls .play-video .fa-play-circle {
+  display: none;
+}
+#content .video-control.action-video .controls .play-video .fa-pause-circle {
+  display: inline;
+  opacity: 0;
+}
+#content .video-control.action-video .controls .play-video span {
+  display: none;
+}
+#content .video-control.action-video:hover .controls .play-video .fa-pause-circle {
+  opacity: 1;
+}
+#content section {
+  padding: 0 50px;
+}
+#content section .card {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+#content section .card * {
+  transition: 0.5s all;
+}
+#content section .card .top-inner {
+  position: relative;
+  width: 100%;
+  height: 170px;
+}
+#content section .card .top-inner .card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#content section .card .top-inner .card-video-top {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#content section .card .card-body {
+  background-image: linear-gradient(to left, transparent 0%, #000000ee 100%);
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  padding: 5px 0 5px 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#content section .card .card-body .group-btn {
+  height: 0;
+  opacity: 0;
+}
+#content section .card .card-body .group-btn a.btn {
+  color: #fff;
+}
+#content section .card:hover {
+  transform: scale(1.1);
+}
+#content section .card:hover .top-inner .card-img-top {
+  opacity: 0;
+}
+#content section .card:hover .top-inner .card-video-top {
+  opacity: 1;
+}
+#content section .card:hover .group-btn {
+  height: 100%;
+  opacity: 1;
+}
+#content section .card:hover .group-btn a.btn {
+  color: #fff;
+}
+#content section .carousel .carousel-control-prev,
+#content section .carousel .carousel-control-next {
+  width: 60px;
+}
+#content section .carousel .carousel-control-prev {
+  left: -4%;
+}
+#content section .carousel .carousel-control-next {
+  right: -4%;
+}
+#content section.section-popular .title {
+  border-bottom: 1px solid #ddd;
+}
+#content section.section-popular .title h1 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+#content section.section-popular .content {
+  margin-top: 10px;
+}
+#content section.section-popular .content .trailer-popular {
+  position: relative;
+}
+#content section.section-popular .content .content-popular {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: right;
+}
+#content section.section-popular .content .content-popular .name-film {
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+}
+#content section.section-popular .content .content-popular .description-film {
+  color: #ddd;
+}
+
+footer {
+  padding: 150px 0 50px 0;
+  background: #141414;
+}
+footer .link {
+  text-decoration: none;
+}
+footer .logo .text {
+  font-size: 2.2rem;
+}
+footer .group-link-footer {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+footer .group-link-footer .item .link {
+  transition: 0.25s all;
+  color: grey;
+  text-decoration: none;
+}
+footer .group-link-footer .item .link:hover {
+  color: #fff;
+}
+footer .group-link-footer.social-media {
+  flex-direction: row;
+}
+footer .group-link-footer.social-media .item {
+  transition: 0.25s all;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .group-link-footer.social-media .item a.link {
+  font-size: 2rem;
+  color: #ddd;
+}
+footer .group-link-footer.social-media .item a.link i {
+  transition: 0.25s all;
+}
+footer .group-link-footer.social-media .item:hover {
+  background-color: #fff;
+}
+footer .group-link-footer.social-media .item:hover a.link .fa-facebook-square {
+  color: #007bff;
+}
+footer .group-link-footer.social-media .item:hover a.link .fa-instagram {
+  color: #6f42c1;
+}
+footer .group-link-footer.social-media .item:hover a.link .fa-twitter {
+  color: #17a2b8;
+}
+footer .group-link-footer.social-media .item:hover a.link .fa-youtube {
+  color: #dc3545;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar .nav-right {
+    justify-content: space-between;
+  }
+  .navbar .nav-right .group-notification.nav-right-item {
+    display: none;
+  }
+
+  #baner .group-infor {
+    width: 100%;
+    padding-left: 1rem;
+  }
+  #baner .group-infor .infor-name-trailer {
+    font-size: 2.5rem;
+  }
+  #baner .group-link a.btn:last-child {
+    background-color: #6d6d6eb3;
+  }
+
+  #content section {
+    padding: 0 5px;
+  }
+  #content section .carousel .carousel-control-prev,
+#content section .carousel .carousel-control-next {
+    width: 20px;
+  }
+}
+@keyframes circle-control {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=HomeMain.css.map */

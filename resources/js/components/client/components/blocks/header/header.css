@@ -1,0 +1,11 @@
+header {
+  background: rgba(6, 6, 6, 0.9);
+}
+header .nav-custom {
+  background-color: transparent;
+}
+header .nav-custom lin .nav-item a {
+  color: #fff;
+}
+
+/*# sourceMappingURL=header.css.map */
