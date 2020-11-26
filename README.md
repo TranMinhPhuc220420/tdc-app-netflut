@@ -6,8 +6,8 @@ Netflut theo đuổi một sứ mệnh cung cấp cho khách hàng trải nghi�
 Với khẩu hiệu “AMAZING JOYS. EVERYDAY. ANYWHERE.” (NIỀM VUI TUYỆT VỜI. MỖI NGÀY. MỌI NƠI), Clip TV luôn nỗ lực hết mình để phục vụ cho niềm vui của tất cả mọi người, mọi nhà trong từng ngày, từng khoảnh khắc cuộc sống và bất kể ở nơi đâu. Vì chúng tôi hiểu rằng niềm vui chính là chất keo tuyệt vời nhất cho sự chia sẻ và gắn kết mọi người với nhau.
 
 ## To can run localhost
-### Install folder .vendor 
+### Install package composer.json
   - Command line to install: composer update
 
-### Install folder node_modules 
+### Install package package.json
   - Command line to install: npm install ||  npm i || yarn install || yarn i
