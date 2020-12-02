@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\TypeFilmController;
 use App\Models\Film;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
-use MongoDB\BSON\ObjectId;
 use Raju\Streamer\Helpers\VideoStream;
 
 /*
@@ -33,7 +33,12 @@ Route::get('/image/{id_image}', function ($id_image) {
   return response()->file(Storage::path('public/image/' . $id_image . '.jpg'));
 });
 
-  Route::get('get/video/all', function () {
-    $data = Film::all();
-    echo json_encode($data);
+Route::get('get/video/all', function () {
+  $data = Film::all();
+  echo json_encode($data);
 });
+
+Route::prefix('type-film')->group(function () {
+  Route::get('/get/all', [TypeFilmController::class, 'getAll']);
+});
+

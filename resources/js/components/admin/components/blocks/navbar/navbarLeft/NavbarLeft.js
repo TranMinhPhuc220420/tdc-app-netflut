@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setMenu } from '../../../../actions'
+
 import avatar from '../../../../public/images/user.png';
 
-const itemSidebar = (props) => {
-
-};
-
 const NavbarLeft = () => {
-  const hideNavigation = () => {
-    document.querySelector('body').classList.remove('sidebar-open');
-    document.querySelector('body').classList.remove('sidebar-collapse');
-  };
+  const listMenuMav = useSelector(state => state.menu);
+  const dispatch = useDispatch();
+
 
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4" style={{position: 'fixed'}}>
@@ -35,52 +34,30 @@ const NavbarLeft = () => {
         {/* <!-- Sidebar Menu --> */}
         <nav className="mt-2">
           <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li className="nav-item" onClick={hideNavigation} >
-              <Link to={'/admin'} className="nav-link active">
-                <i className="fas fa-home"/>
-                <p>
-                  Trang chủ
-                </p>
-              </Link>
-            </li>
 
-            <li className="nav-item" onClick={hideNavigation}>
-              <Link to={'/admin/sale'} className="nav-link">
-                <i className="fas fa-receipt"/>
-                <p>
-                  Đơn hàng
-                   <span className="right badge badge-danger">New</span>
-                </p>
-              </Link>
-            </li>
+            {listMenuMav.map((item, index) => (
+              <li key={index} className="nav-item"
+                  onClick={() => {
+                    //create list template
+                    let listTemp = [...listMenuMav];
+                    //Remove item are choosing
+                    listTemp.forEach((itemRef, index) => {
+                      itemRef.isActive = false;
+                    });
 
-            <li className="nav-item" onClick={hideNavigation}>
-              <Link to={'/admin/product'} className="nav-link">
-                <i className="fas fa-th"/>
-                <p>
-                  Sản phẩm
-                </p>
-              </Link>
-            </li>
+                    //Set active for item choosing
+                    item.isActive = true;
 
-            <li className="nav-item" onClick={hideNavigation}>
-              <Link to={'/admin/category'} className="nav-link">
-                <i className="fas fa-sitemap"/>
-                <p>
-                  Loại sản phẩm
-                </p>
-              </Link>
-            </li>
+                    //Commit set data state
+                    dispatch(setMenu(listTemp));
+                  }} >
 
-            <li className="nav-item" onClick={hideNavigation}>
-              <Link to={'/admin/setting'} className="nav-link">
-                <i className="fas fa-user-cog"/>
-                <p>
-                  Cài đặt
-                </p>
-              </Link>
-            </li>
-
+                <Link to={item.path} className={item.isActive ? 'nav-link active': 'nav-link'}>
+                  <i className={item.iconCls}/>
+                  <p>{item.text}</p>
+                </Link>
+              </li>
+            ))}
 
           </ul>
         </nav>

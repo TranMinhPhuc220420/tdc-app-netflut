@@ -5,18 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Film extends Eloquent
+class TypeFilm extends Eloquent
 {
   use HasFactory;
-  protected $connection = 'mongodb';
-  protected $collection = 'films';
 
-  /**
-   * The attributes that are mass assignable.
-   *
-   * @var array
-   */
+  protected $connection = 'mongodb';
+  protected $collection = 'type_films';
+
   protected $fillable = [
-//    'name_film'
+    '_id', 'name'
   ];
 }

@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
   <script >
     const IS_CLIENT = false;
+    const DOMAIN = window.location.hostname;
   </script>
 </head>
 
@@ -68,7 +69,25 @@
 <!--  component loading -->
 
 
+<script src="https://kit.fontawesome.com/c776f8e511.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{{ asset('js/app.js')}}"></script>
+<script>
+  //remove loading page or components
+  setTimeout(function () {
+    document.querySelector('body').classList.remove('loading');
+    document.querySelector('#splash').classList.remove('show');
+  }, 2000);
+
+  //resize for navigation left main
+  window.addEventListener('resize', () => {
+    let maxWidth = document.documentElement.clientWidth;
+    if (maxWidth <= 992) {
+      document.querySelector('body').classList.add('sidebar-collapse');
+    } else {
+      document.querySelector('body').classList.remove('sidebar-collapse');
+    }
+  });
+</script>
 </body>
 
 </html>

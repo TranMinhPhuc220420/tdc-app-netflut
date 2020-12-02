@@ -202,7 +202,7 @@ const HomeMain = (props) => {
                       <div className="card text-left">
                         <div className="top-inner">
                           <img className="card-img-top" src={ImageBannerTest} alt=""/>
-                          <video className="card-video-top" src={urlVideoDemo} muted></video>
+                          <video className="card-video-top" src={urlVideoDemo} muted/>
                         </div>
 
                         <div className="card-body">

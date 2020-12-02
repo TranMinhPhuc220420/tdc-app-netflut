@@ -6,8 +6,8 @@ import NavbarLeft from './navbarLeft/NavbarLeft';
 const Navbar = () => {
   return (
     <div>
-      <NavbarTop />
-      <NavbarLeft />
+      <NavbarTop/>
+      <NavbarLeft/>
     </div>
   );
 };

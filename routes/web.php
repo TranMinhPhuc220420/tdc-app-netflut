@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoryTypeController;
 use App\Http\Controllers\FilmController;
-use App\Models\Film;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\TypeFilmController;
+use App\Models\CategoryType;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +25,23 @@ Route::get('/', function () {
   return view('client.home');
 });
 
-Route::post('/admin/add-film', [FilmController::class, 'upload']);
 
-Route::get('/admin', function () {
-  return view('admin.home');
+Route::prefix('admin')->group(function () {
+  /*
+   * GET */
+  Route::get('/{gadget}', function () {
+    return view('admin.home');
+  })->where('gadget', '[A-Za-z0-9(\W)]+');;
+
+  Route::get('/', function () {
+    return view('admin.home');
+  });
+
+  /*
+   * POST */
+  Route::post('/add-film', [FilmController::class, 'upload']);
+  Route::post('/add-type-film', [TypeFilmController::class, 'upload']);
+  Route::post('/delete-type-film', [TypeFilmController::class, 'destroy']);
+  Route::post('/edit-type-film', [TypeFilmController::class, 'edit']);
 });
+

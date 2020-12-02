@@ -110,7 +110,6 @@ class FilmController extends Controller
       $film->name_film = $request->get('nameFilmReal');
       $film->name_film_raw = $request->get('nameFilmRaw');
       $film->_id = $idByTime;
-      $film->arrtest = array('test' => 123, 'test1' => 123, 'test2' => 123);
       $film->save();
 
       //Set response
